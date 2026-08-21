@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Surprise Wisher 🎁</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎁 Surprise Wisher</h1>
+
+        <p class="subtitle">
+            Create a special surprise for someone you love ❤️
+        </p>
+
+        <form action="/surprise" method="POST" enctype="multipart/form-data">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter their name"
+                required
+            >
+
+            <select name="occasion">
+
+                <option value="Birthday">
+                    🎂 Birthday
+                </option>
+
+                <option value="Anniversary">
+                    💖 Anniversary
+                </option>
+
+                <option value="Friendship">
+                    🤝 Friendship
+                </option>
+
+                <option value="Congratulations">
+                    🎉 Congratulations
+                </option>
+
+            </select>
+              
+             <textarea
+    name="message"
+    placeholder="Write your special message ❤️"
+    rows="5"
+    required
+></textarea>
+              <label>📸 Add a special photo</label>
+
+<input
+    type="file"
+    name="photo"
+    accept="image/*"
+>
+
+            <button type="submit">
+                Create Surprise 🎁
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+  </html>
